@@ -21,7 +21,7 @@ public class WordSearch {
     }
 
     private static void searchLines(String pattern, String fileName) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String line;
             int lineNumber = 0;
 
@@ -32,6 +32,6 @@ public class WordSearch {
                     System.out.println("Line " + lineNumber + ": " + line);
                 }
             }
-        }
+            reader.close();
     }
 }
